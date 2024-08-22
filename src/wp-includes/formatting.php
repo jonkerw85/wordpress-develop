@@ -5688,7 +5688,7 @@ function capital_P_dangit( $text ) {
 	// Simple replacement for titles.
 	$current_filter = current_filter();
 	if ( 'the_title' === $current_filter || 'wp_title' === $current_filter ) {
-		return str_replace( 'Wordpress', 'WordPress', $text );
+		return str_replace( [ 'Wordpress', 'wordpress' ], 'WordPress', $text );
 	}
 	// Still here? Use the more judicious replacement.
 	static $dblq = false;
